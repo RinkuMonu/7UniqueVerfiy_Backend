@@ -1,0 +1,36 @@
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546","timestamp":"2025-06-21T08:50:48.526Z"}
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546","timestamp":"2025-06-21T08:51:23.771Z"}
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546","timestamp":"2025-06-21T08:52:28.316Z"}
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546","timestamp":"2025-06-21T08:56:53.895Z"}
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546","timestamp":"2025-06-21T08:57:29.963Z"}
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546","timestamp":"2025-06-21T08:57:31.908Z"}
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546","timestamp":"2025-06-21T08:57:33.168Z"}
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546","timestamp":"2025-06-21T08:58:14.613Z"}
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546","timestamp":"2025-06-21T08:59:57.858Z"}
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546ee","timestamp":"2025-06-21T09:00:37.659Z"}
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546ee","timestamp":"2025-06-21T09:03:22.789Z"}
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546ee","timestamp":"2025-06-21T09:03:40.768Z"}
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546ee","timestamp":"2025-06-21T09:04:51.166Z"}
+{"error":"Server Error","level":"error","message":"get_26as verification failed","refid":"6546546546","timestamp":"2025-06-21T09:10:57.968Z"}
+{"error":"Class 'App\\Libraries\\DateTime' not found","level":"error","message":"Request failed","refid":"587485","timestamp":"2025-06-23T12:24:18.083Z","type":"bank_verify"}
+{"error":"Class 'App\\Libraries\\DateTime' not found","level":"error","message":"Verification failed: aadhaar_without_otp","refid":"54545","status":500,"timestamp":"2025-06-23T12:25:27.101Z"}
+{"error":"Class 'App\\Libraries\\DateTime' not found","level":"error","message":"Verification failed: aadhaar_without_otp","refid":"34567","status":500,"timestamp":"2025-06-23T12:29:35.864Z"}
+{"error":"Class 'App\\Libraries\\DateTime' not found","level":"error","message":"Verification failed: aadhaar_without_otp","refid":"34567","status":500,"timestamp":"2025-06-23T12:33:38.684Z"}
+{"error":"Class 'App\\Libraries\\DateTime' not found","level":"error","message":"Verification failed: aadhaar_without_otp","refid":"34567","status":500,"timestamp":"2025-06-23T12:33:54.411Z"}
+{"error":"Class 'App\\Libraries\\DateTime' not found","level":"error","message":"Verification failed: aadhaar_without_otp","refid":"234567","status":500,"timestamp":"2025-06-23T12:37:23.987Z"}
+{"error":"Class 'App\\Libraries\\DateTime' not found","level":"error","message":"Verification failed: aadhaar_without_otp","refid":"234567","status":500,"timestamp":"2025-06-23T12:37:33.822Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get_profile verification failed","refid":"tertetret","timestamp":"2025-07-22T07:25:48.504Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get_profile verification failed","refid":"tertetret","timestamp":"2025-07-22T07:29:22.386Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get_profile verification failed","refid":"tertetret","timestamp":"2025-07-22T07:34:53.862Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get_profile verification failed","refid":"tertetret","timestamp":"2025-07-22T07:40:39.825Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get_profile verification failed","refid":"tertetret","timestamp":"2025-07-22T07:40:45.835Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get_profile verification failed","refid":"tertetret","timestamp":"2025-07-22T07:40:56.012Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get_profile verification failed","refid":"tertetret","timestamp":"2025-07-22T09:10:47.123Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get_profile verification failed","refid":"tertetret","timestamp":"2025-07-22T09:11:54.626Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get_profile verification failed","refid":"tertetret","timestamp":"2025-07-22T09:12:26.786Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get_profile verification failed","refid":"tertetret","timestamp":"2025-07-22T09:14:05.672Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get_profile verification failed","refid":"tertetret","timestamp":"2025-07-22T09:14:34.252Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get_profile verification failed","refid":"tertetret","timestamp":"2025-07-22T09:21:23.159Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get_profile verification failed","refid":"tertetret","timestamp":"2025-07-22T09:24:43.680Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get-profile verification failed","refid":"tertetret","timestamp":"2025-07-22T09:30:07.305Z"}
+{"error":"Request failed with status code 404","level":"error","message":"get-profile verification failed","refid":"tertetret","timestamp":"2025-07-22T09:30:58.100Z"}
