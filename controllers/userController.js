@@ -92,7 +92,7 @@ const uploadKYC = async (req, res) => {
 const getWalletLedger = async (req, res) => {
   try {
     const userId = req.user._id;
- 
+
     const {
       mode,
       page = 1,
@@ -106,7 +106,7 @@ const getWalletLedger = async (req, res) => {
       minAmount,
       maxAmount
     } = req.query;
-    
+
 
     const modeData = mode === 'true' ? 'production' : 'credentials';
 
@@ -175,9 +175,10 @@ const serviceRequest = async (req, res) => {
     if (alreadyPurchased) {
       return res.status(400).json({ message: 'Service already purchased' });
     }
-
+    const env = user.documents.isVerified ? 'production' : 'credentials'
+    
     // Check wallet balance
-    if (user.wallet.mode.production < service.active_charge) {
+    if (user.wallet.mode.env < service.active_charge) {
       return res.status(400).json({ message: 'Insufficient wallet balance' });
     }
 
