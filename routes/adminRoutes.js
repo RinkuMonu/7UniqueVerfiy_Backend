@@ -19,6 +19,7 @@ const {
   parchaseService,
   apirequests,
   updateApirequests,
+  getUserById,
 
 } = require('../controllers/adminController');
 
@@ -39,6 +40,7 @@ router.post('/productionKey', protect, isAdmin, getAllServices);
 
 router.put('/update-service/:editId', protect, isAdmin, updateServiceCharge);
 router.get('/users', protect, isAdmin, getAllUsers);
+router.get('/user/:id', protect, isAdmin, getUserById);
 router.get('/report', protect, isAdmin, getServiceReport);
 
 
