@@ -249,8 +249,9 @@ const updateApirequests = async (req, res) => {
       return res.status(404).json({ message: 'Service not found' });
     }
 
+    const env = user.documents.isVerified ? 'production' : 'credentials'
     // Check wallet balance
-    if (user.wallet.mode.production < service.active_charge) {
+    if (user.wallet.mode.env < service.active_charge) {
       return res.status(400).json({ message: 'Insufficient wallet balance' });
     }
 
