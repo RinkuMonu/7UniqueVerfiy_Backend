@@ -144,13 +144,13 @@ const parchaseService = async (req, res) => {
       return res.status(400).json({ message: 'Service already purchased' });
     }
 
-    // Check wallet balance
-    if (user.wallet.mode.production < service.active_charge) {
-      return res.status(400).json({ message: 'Insufficient wallet balance' });
-    }
+    // // Check wallet balance
+    // if (user.wallet.mode.production < service.active_charge) {
+    //   return res.status(400).json({ message: 'Insufficient wallet balance' });
+    // }
 
     // Deduct from wallet
-    user.wallet.mode.production -= service.active_charge;
+    // user.wallet.mode.production -= service.active_charge;
 
     // Add service to user's purchased services
     user.services.push(serviceId);
