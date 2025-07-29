@@ -84,6 +84,9 @@ const updateUser = async (req, res) => {
 
     res.status(200).json({ message: 'User updated successfully', user });
   } catch (err) {
+    if (err.code === 11000) {
+      return res.status(400).json({ message: 'Email already exist' });
+    }
     console.error("User update error:", err);
     res.status(500).json({ message: 'Error updating user', error: err.message });
   }
