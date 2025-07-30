@@ -1201,3 +1201,18 @@
 {"level":"info","message":"Sending request for aadhaar_sendotp","refid":"631317326400","requestPayload":{"id_number":"631317326400"},"timestamp":"2025-07-28T09:24:15.193Z"}
 {"level":"info","message":"Verification log saved: aadhaar_sendotp - 631317326400","timestamp":"2025-07-28T09:24:20.060Z"}
 {"level":"info","message":"Verification success: aadhaar_sendotp","refid":"631317326400","resData":{"data":{"client_id":"22285e25-c1b4-46ff-8a70-f4f03afb5acd","if_number":true,"otp_sent":true,"status":"generate_otp_success","valid_aadhaar":true},"message":"OTP sent to your Registered Mobile number. Check your mobile.","status":true,"statuscode":200},"status":200,"timestamp":"2025-07-28T09:24:20.060Z"}
+{"level":"info","message":"Sending request for aadhaar_without_otp","refid":"423423","requestPayload":{"id_number":"631317326400","refid":"423423"},"timestamp":"2025-07-30T06:20:27.894Z"}
+{"level":"info","message":"Verification log saved: aadhaar_without_otp - 423423","timestamp":"2025-07-30T06:20:30.990Z"}
+{"level":"info","message":"Verification success: aadhaar_without_otp","refid":"423423","resData":{"data":{"aadhaar_number":"631317326400","age_range":"20-30","client_id":"1695c9d9-44ba-44ee-922c-a1a29d1a5ad1","gender":"M","is_mobile":true,"last_digits":"773","less_info":false,"remarks":"success","state":"Rajasthan"},"message":"success","reference_id":66940026,"status":true,"statuscode":200},"status":200,"timestamp":"2025-07-30T06:20:30.990Z"}
+{"level":"info","message":"Sending request for udyam_aadhaar_v2","refid":"423423","requestPayload":{"refid":"423423","udyam_aadhaar":"48363524245377484"},"timestamp":"2025-07-30T08:53:38.035Z"}
+{"level":"info","message":"Verification log saved: udyam_aadhaar_v2 - 423423","timestamp":"2025-07-30T08:53:38.583Z"}
+{"level":"info","message":"Verification success: udyam_aadhaar_v2","refid":"423423","resData":{"message":"Invalid user.223.190.212.244","status":false,"statuscode":201},"status":201,"timestamp":"2025-07-30T08:53:38.584Z"}
+{"level":"info","message":"Sending request for udyam_aadhaar_v2","refid":"423423","requestPayload":{"refid":"423423","udyam_aadhaar":"48363524245377484"},"timestamp":"2025-07-30T08:53:56.870Z"}
+{"level":"info","message":"Verification log saved: udyam_aadhaar_v2 - 423423","timestamp":"2025-07-30T08:53:57.113Z"}
+{"level":"info","message":"Verification success: udyam_aadhaar_v2","refid":"423423","resData":{"message":"Invalid user.223.190.212.244","status":false,"statuscode":201},"status":201,"timestamp":"2025-07-30T08:53:57.115Z"}
+{"level":"info","message":"Sending request for udyam_aadhaar_v1","refid":"423423","requestPayload":{"id_number":"48363524245377484","refid":"423423"},"timestamp":"2025-07-30T08:54:03.322Z"}
+{"level":"info","message":"Verification log saved: udyam_aadhaar_v1 - 423423","timestamp":"2025-07-30T08:54:03.695Z"}
+{"level":"info","message":"Verification success: udyam_aadhaar_v1","refid":"423423","resData":{"message":"Invalid user.223.190.212.244","status":false,"statuscode":201},"status":201,"timestamp":"2025-07-30T08:54:03.696Z"}
+{"level":"info","message":"Sending request for udyam_aadhaar_v1","refid":"423423","requestPayload":{"id_number":"48363524245377484","refid":"423423"},"timestamp":"2025-07-30T08:57:47.639Z"}
+{"level":"info","message":"Verification log saved: udyam_aadhaar_v1 - 423423","timestamp":"2025-07-30T08:57:48.180Z"}
+{"level":"info","message":"Verification success: udyam_aadhaar_v1","refid":"423423","resData":{"message":"Invalid user.223.190.212.244","status":false,"statuscode":201},"status":201,"timestamp":"2025-07-30T08:57:48.181Z"}
