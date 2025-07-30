@@ -14,8 +14,10 @@ const usageTracker = (serviceName) => {
       if (!serviceName) {
         return res.status(400).json({ message: "Service name is required" });
       }
+      console.log(serviceName);
+      
 
-      const service = await Service.findOne({ name: serviceName });
+      const service = await Service.findOne({ endpoint: serviceName });
       if (!service) {
         return res.status(404).json({ message: "Service not found" });
       }
