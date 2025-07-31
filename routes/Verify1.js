@@ -97,7 +97,8 @@ const {
   mobileToUpi,
   cardValidator,
   get26as,
-  itr_check
+  itr_check,
+  itr_create_client
 } = require("../controllers/verfiy/Verify5");
 
 const verifyController = require("../controllers/verfiy/Verify6");
@@ -187,6 +188,7 @@ router.post('/uan-basic-v1', apiAuthMiddleware, usageTracker("uan-basic-v1"), ua
 router.post('/uan-basic-v2', apiAuthMiddleware, usageTracker("uan-basic-v2"), uanBasicV2);
 router.post('/aadhaar-to-uan', apiAuthMiddleware, usageTracker("aadhaar-to-uan"), aadhaarToUan);
 router.post('/fetch-by-pan', apiAuthMiddleware, usageTracker("fetch-by-pan"), fetchByPan);
+router.post('/itr_create_client', apiAuthMiddleware, usageTracker("itr_create_client"), itr_create_client);
 router.post('/itr-forget-password', apiAuthMiddleware, usageTracker("itr-forget-password"), itrForgetPassword);
 router.post('/itr-submit-otp', apiAuthMiddleware, usageTracker("itr-submit-otp"), itrSubmitOtp);
 router.post('/get-profile', apiAuthMiddleware, usageTracker("get-profile"), getProfile);
