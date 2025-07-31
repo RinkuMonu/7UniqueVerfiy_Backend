@@ -229,7 +229,7 @@ const createPaysprintController = (endpointPath, type) => {
     handleVerification(
       req,
       res,
-      `https://api.verifya2z.com/api/v1/verification/${endpointPath}`,
+      `/${endpointPath}`,
       type
     );
 };

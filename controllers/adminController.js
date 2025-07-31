@@ -3026,7 +3026,7 @@ const getUserLedger = async (req, res) => {
       page: parseInt(page),
       limit: parseInt(limit),
       ledger: records,
-      totalPages: Math.ceil(records.length / limit),
+      totalPages: Math.ceil(total / limit),
     });
   } catch (err) {
     res.status(500).json({ message: 'Failed to fetch ledger', error: err.message });
