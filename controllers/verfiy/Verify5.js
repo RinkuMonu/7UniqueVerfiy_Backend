@@ -369,6 +369,7 @@ module.exports = {
   uanBasicV2: (req, res) => handleVerification(req, res, "https://api.verifya2z.com/api/v1/verification/uan_basic_v2", "uan_basic_v2", "refid"),
   aadhaarToUan: (req, res) => handleVerification(req, res, "https://api.verifya2z.com/api/v1/verification/aadhaar_to_uan", "aadhaar_to_uan", "refid"),
   fetchByPan: (req, res) => handleVerification(req, res, "https://api.verifya2z.com/api/v1/verification/uan/v2/fetch_by_pan", "uan_fetch_by_pan", "refid"),
+  itr_create_client: (req, res) => handleVerification(req, res, "https://api.verifya2z.com/api/v1/verification/itr_create_client", "itr_create_client", "username", "password"),
   itrForgetPassword: (req, res) => handleVerification(req, res, "https://api.verifya2z.com/api/v1/verification/itr_forget_password", "itr_forget_password", "client_id"),
   itrSubmitOtp: (req, res) => handleVerification(req, res, "https://api.verifya2z.com/api/v1/verification/itr_submit_otp", "itr_submit_otp", "client_id"),
   getProfile: (req, res) => handleVerification(req, res, "https://api.verifya2z.com/api/v1/verification/get_Profile", "get_profile", "client_id"),
