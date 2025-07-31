@@ -1216,3 +1216,5 @@
 {"level":"info","message":"Sending request for udyam_aadhaar_v1","refid":"423423","requestPayload":{"id_number":"48363524245377484","refid":"423423"},"timestamp":"2025-07-30T08:57:47.639Z"}
 {"level":"info","message":"Verification log saved: udyam_aadhaar_v1 - 423423","timestamp":"2025-07-30T08:57:48.180Z"}
 {"level":"info","message":"Verification success: udyam_aadhaar_v1","refid":"423423","resData":{"message":"Invalid user.223.190.212.244","status":false,"statuscode":201},"status":201,"timestamp":"2025-07-30T08:57:48.181Z"}
+{"level":"info","message":"Sending request for aadhaar_qr_check","refid":"AADHAAR_QR_CHECK-1753942268898","timestamp":"2025-07-31T06:11:08.902Z"}
+{"level":"info","message":"success response: aadhaar_qr_check","refid":"AADHAAR_QR_CHECK-1753942268898","resData":{"message":"Invalid user.223.190.212.244","status":false,"statuscode":201},"status":201,"timestamp":"2025-07-31T06:11:10.196Z"}

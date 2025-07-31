@@ -155,7 +155,7 @@ router.post("/epfo_without_otp", apiAuthMiddleware, usageTracker("epfo_without_o
 router.post("/ckyc_search", apiAuthMiddleware, usageTracker("ckyc_search"), ckycSearch);
 router.post("/ckyc_download", apiAuthMiddleware, usageTracker("ckyc_download"), ckycDownload);
 router.post("/liveness_check", apiAuthMiddleware, usageTracker("liveness_check"), upload.single("video_file"), livenessCheck);
-router.post("/face_match", apiAuthMiddleware, usageTracker("face_match"), upload.single("image1"), faceMatch);
+router.post("/face_match", apiAuthMiddleware, usageTracker("face_match"), upload.fields([{ name: 'image1', maxCount: 1 }, { name: 'image2', maxCount: 1 }]), faceMatch);
 router.post("/upi_verify", apiAuthMiddleware, usageTracker("upi_verify"), upiVerify);
 router.post("/challan_info_v1", apiAuthMiddleware, usageTracker("challan_info_v1"), challanInfoV1);
 router.post("/challan_info_v2", apiAuthMiddleware, usageTracker("challan_info_v2"), challanInfoV2);
