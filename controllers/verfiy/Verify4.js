@@ -93,8 +93,16 @@ const handleFileUpload = async (req, res, endpoint, type, fileField, extraFields
   const refid = req.body.refid || `${type.toUpperCase()}-${Date.now()}`;
   const form = new FormData();
 
-  // Add main file
-  form.append(fileField, req.file.buffer, { filename: req.file.originalname });
+  if (req.files) {
+    const image1 = req.files?.image1?.[0];
+    const image2 = req.files?.image2?.[0];
+
+    form.append("image1", image1.buffer, { filename: image1.originalname });
+    form.append("image2", image2.buffer, { filename: image2.originalname });
+  } else {
+    // Add main file
+    form.append(fileField, req.file.buffer, { filename: req.file.originalname });
+  }
 
   // Add extra fields
   Array.isArray(extraFields) &&
@@ -194,7 +202,7 @@ module.exports = {
   nameMatch: createPaysprintController("name_match", "name_match"),
   imeiVerify: createPaysprintController("imei_verification", "imei_verification"),
   ocrDocUpload: (req, res) => handleFileUpload(req, res, "ocr_doc", "ocr_doc_upload", "file", ["type", "link", "back"]),
-  faceMatch: (req, res) => handleFileUpload(req, res, "face_match", "face_match", "image1", ["threshold", "image2_url"]),
+  faceMatch: (req, res) => handleFileUpload(req, res, "face_match", "face_match", ["image1", "image2"], "threshold"),
   livenessCheck: (req, res) => handleFileUpload(req, res, "liveness_check", "liveness_check", "video_file", { allowURL: true }),
   aadhaarQRCheck: (req, res) => handleFileUpload(req, res, "aadhaar_qr_check", "aadhaar_qr_check", "aadhaar_image"),
   bankStatement: (req, res) => handleFileUpload(req, res, "bank-statement-analyzer/upload", "bank-statement-analyzer/upload", "file", ["refid"]),
