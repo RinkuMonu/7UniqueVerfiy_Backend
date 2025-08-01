@@ -15,7 +15,7 @@ const usageTracker = (serviceName) => {
         return res.status(400).json({ message: "Service name is required" });
       }
       console.log(serviceName);
-      
+
 
       const service = await Service.findOne({ endpoint: serviceName });
       if (!service) {
@@ -43,6 +43,9 @@ const usageTracker = (serviceName) => {
 
       // Decide deduction amount
       const deductionAmount = isCustom ? -isCustom.customCharge : -service.charge;
+      
+      // create walletAmount
+      const walletAmount = isCustom ? isCustom.customCharge : service.charge;
 
       // Update wallet
       await user.updateOne({
@@ -56,7 +59,7 @@ const usageTracker = (serviceName) => {
       await Wallet.create({
         userId: user._id,
         type: 'debit',
-        amount: service.charge,
+        amount: walletAmount,
         mode: env,
         description: `Charge for ${serviceName} (${env})`,
         referenceId: `SRV-${Date.now()}`
@@ -68,7 +71,7 @@ const usageTracker = (serviceName) => {
         {
           $inc: {
             "serviceUsage.$.hitCount": 1,
-            "serviceUsage.$.totalCharge": service.charge
+            "serviceUsage.$.totalCharge": walletAmount
           }
         }
       );

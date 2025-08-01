@@ -254,13 +254,13 @@ const updateApirequests = async (req, res) => {
 
     const env = user.documents.isVerified ? 'production' : 'credentials'
     // Check wallet balance
-    if (user.wallet.mode.env < service.active_charge) {
-      return res.status(400).json({ message: 'Insufficient wallet balance' });
-    }
+    // if (user.wallet.mode.env < service.active_charge) {
+    //   return res.status(400).json({ message: 'Insufficient wallet balance' });
+    // }
 
     // Deduct from wallet
     if (status == 'approved') {
-      user.wallet.mode.production -= service.active_charge;
+      // user.wallet.mode.production -= service.active_charge;
       // Add service to user's purchased services
       user.services.push(serviceId);
       await user.save();
@@ -2867,6 +2867,12 @@ const verifyKYC = async (req, res) => {
     // Update document and production info
     user.documents.isVerified = isVerified;
     user.documents.kycRequest = false;
+
+    // Reset services and usage if KYC is approved
+    if (isVerified) {
+      user.services = [];
+      user.serviceUsage = [];
+    }
 
     user.production = {
       jwtSecret,

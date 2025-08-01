@@ -176,11 +176,11 @@ const serviceRequest = async (req, res) => {
       return res.status(400).json({ message: 'Service already purchased' });
     }
     const env = user.documents.isVerified ? 'production' : 'credentials'
-    
+
     // Check wallet balance
-    if (user.wallet.mode.env < service.active_charge) {
-      return res.status(400).json({ message: 'Insufficient wallet balance' });
-    }
+    // if (user.wallet.mode.env < service.active_charge) {
+    //   return res.status(400).json({ message: 'Insufficient wallet balance' });
+    // }
 
     // Deduct from wallet
     // user.wallet.mode.production -= service.active_charge;
@@ -240,7 +240,7 @@ const getServiceById = async (req, res) => {
 
 const getUsageReport = async (req, res) => {
   try {
-    const { service, startDate, endDate, mode } = req.query;
+    const { service, startDate, endDate, mode, page = 1, limit = 10 } = req.query;
     console.log('mode', mode);
 
     const user = await User.findById(req.user._id);
@@ -268,8 +268,11 @@ const getUsageReport = async (req, res) => {
         return (!start || usedDate >= start) && (!end || usedDate <= end);
       });
     }
+    const totalRecords = usage.length;
+    const totalPages = Math.ceil(totalRecords / limit);
+    const paginatedData = usage.slice((page - 1) * limit, page * limit);
 
-    res.json({ usage });
+    res.json({ usage: paginatedData, totalPages });
   } catch (err) {
     res.status(500).json({
       message: 'Failed to fetch usage report',
