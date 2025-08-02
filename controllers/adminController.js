@@ -95,7 +95,7 @@ const updateUser = async (req, res) => {
 
 const addService = async (req, res) => {
   try {
-    const { name, charge, descreption, active_charge, endpoint, method, fields } = req.body.services;
+    const { name, charge, descreption, active_charge, status, endpoint, method, fields } = req.body.services;
 
     // Check for existing service
     const existing = await Service.findOne({ name });
@@ -109,6 +109,7 @@ const addService = async (req, res) => {
       charge,
       descreption,
       active_charge,
+      status,
       endpoint,
       method: method || "POST",
       fields: fields || []
@@ -2519,8 +2520,8 @@ const assignAllServicesToUser = async (req, res) => {
 const updateServiceCharge = async (req, res) => {
   try {
     const { editId } = req.params;
-    const { name, charge, descreption, active_charge, endpoint, method, fields } = req.body;
-    const service = await Service.findOneAndUpdate({ _id: editId }, { name, charge, active_charge, descreption, endpoint, method, fields }, { new: true, upsert: true });
+    const { name, charge, descreption, active_charge, status, endpoint, method, fields } = req.body;
+    const service = await Service.findOneAndUpdate({ _id: editId }, { name, charge, active_charge, status, descreption, endpoint, method, fields }, { new: true, upsert: true });
     res.json({ message: 'Service charge updated', service });
   } catch (err) {
     res.status(400).json({ message: 'Error updating charge', error: err.message });
