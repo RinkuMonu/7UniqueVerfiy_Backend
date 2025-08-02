@@ -136,6 +136,7 @@ router.post("/bank-statement-analyzer/upload", apiAuthMiddleware, usageTracker("
 router.post("/bank-statement-analyzer/report-fetch", apiAuthMiddleware, usageTracker("bank-statement-analyzer/report-fetch"), bankStatementFatch);
 router.post("/ecredit_score", apiAuthMiddleware, usageTracker("ecredit_score"), ecredit_score);
 router.post("/cibil_score", apiAuthMiddleware, usageTracker("cibil_score"), cibil_score);
+router.post("/cibil_score", apiAuthMiddleware, usageTracker("cibil_score"), cibil_score);
 
 
 // Verify3

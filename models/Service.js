@@ -10,17 +10,23 @@ const serviceSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  descreption:{
-    type:String,
-    required:true,
+  descreption: {
+    type: String,
+    required: true,
   },
-  active_charge:{
-    type:Number,
-    required:true,
+  active_charge: {
+    type: Number,
+    required: true,
+  },
+  status: {
+    type: String,
+    required: true,
+    enum: ['active', 'inactive'],
+    default: "inactive"
   },
   endpoint: { type: String, required: true },
   method: { type: String, default: "POST" },
- // each field with label, name, type, required
+  // each field with label, name, type, required
   fields: [
     {
       label: { type: String, required: true },     // e.g. "Account Number"
