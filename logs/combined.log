@@ -1259,3 +1259,7 @@
 {"level":"info","message":"Verification success: crime_check_individual","refid":"CRIME_CHECK_INDIVIDUAL-1754027272818","resData":{"message":"Invalid user.27.58.125.136","status":false,"statuscode":201},"status":201,"timestamp":"2025-08-01T05:47:54.029Z"}
 {"level":"info","message":"Sending request for crime_check_individual","refid":"CRIME_CHECK_INDIVIDUAL-1754027830889","requestPayload":{"address":"fsdfsdf","crimewatch":"1","dob":"6546","father_name":"fsdfsd","name":"user","pan_number":"OLCPS2766C","report_mode":"realTimeHighAccuracy","req_tag":"eqweqw","ticket_size":"eqweqw"},"timestamp":"2025-08-01T05:57:10.892Z"}
 {"level":"info","message":"Verification success: crime_check_individual","refid":"CRIME_CHECK_INDIVIDUAL-1754027830889","resData":{"message":"Invalid user.27.58.125.136","status":false,"statuscode":201},"status":201,"timestamp":"2025-08-01T05:57:11.338Z"}
+{"level":"info","message":"Returning cached log in credentials mode","timestamp":"2025-08-01T07:56:39.456Z","type":"fuel_price"}
+{"level":"info","message":"Returning cached log in credentials mode","timestamp":"2025-08-01T07:56:44.526Z","type":"fuel_price"}
+{"level":"info","message":"Sending request for fuel_price","refid":"423423","requestPayload":{"citystate":"jaipur","refid":"423423"},"timestamp":"2025-08-01T07:59:08.122Z"}
+{"level":"info","message":"Verification success: fuel_price","refid":"423423","resData":{"message":"Invalid user.27.58.125.136","status":false,"statuscode":201},"status":201,"timestamp":"2025-08-01T07:59:08.570Z"}
