@@ -43,7 +43,7 @@ const usageTracker = (serviceName) => {
 
       // Decide deduction amount
       const deductionAmount = isCustom ? -isCustom.customCharge : -service.charge;
-      
+
       // create walletAmount
       const walletAmount = isCustom ? isCustom.customCharge : service.charge;
 
@@ -67,7 +67,7 @@ const usageTracker = (serviceName) => {
 
       // Track usage
       const usageMatched = await User.updateOne(
-        { _id: user._id, "serviceUsage.service": serviceName },
+        { _id: user._id, "serviceUsage.service": serviceName, "serviceUsage.mode": env },
         {
           $inc: {
             "serviceUsage.$.hitCount": 1,
@@ -75,6 +75,7 @@ const usageTracker = (serviceName) => {
           }
         }
       );
+
 
       // If serviceUsage entry doesn't exist, create it
       if (usageMatched.modifiedCount === 0) {
