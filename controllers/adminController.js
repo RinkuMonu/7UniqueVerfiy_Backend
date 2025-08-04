@@ -2869,12 +2869,6 @@ const verifyKYC = async (req, res) => {
     user.documents.isVerified = isVerified;
     user.documents.kycRequest = false;
 
-    // Reset services and usage if KYC is approved
-    if (isVerified) {
-      user.services = [];
-      user.serviceUsage = [];
-    }
-
     user.production = {
       jwtSecret,
       authKey,
