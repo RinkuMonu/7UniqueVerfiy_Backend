@@ -135,8 +135,9 @@ router.post("/mca_verify", apiAuthMiddleware, usageTracker("mca_verify"), mcaCom
 router.post("/bank-statement-analyzer/upload", apiAuthMiddleware, usageTracker("bank-statement-analyzer/upload"), upload.single("file"), bankStatement);
 router.post("/bank-statement-analyzer/report-fetch", apiAuthMiddleware, usageTracker("bank-statement-analyzer/report-fetch"), bankStatementFatch);
 router.post("/ecredit_score", apiAuthMiddleware, usageTracker("ecredit_score"), ecredit_score);
+router.post("/credit_report_checker", apiAuthMiddleware, usageTracker("credit_report_checker"), ecredit_score);
 router.post("/cibil_score", apiAuthMiddleware, usageTracker("cibil_score"), cibil_score);
-router.post("/cibil_score", apiAuthMiddleware, usageTracker("cibil_score"), cibil_score);
+// router.post("/cibil_score", apiAuthMiddleware, usageTracker("cibil_score"), cibil_score);
 
 
 // Verify3

@@ -861,6 +861,7 @@ module.exports = {
   tanVerify: (req, res) => handleVerification(req, res, "https://api.verifya2z.com/api/v1/verification/tan_verify", "tan_verify"),
   getStateList: (req, res) => handleVerification(req, res, "https://api.verifya2z.com/api/v1/verification/getStateList", "get_state_list"),
   ecredit_score: (req, res) => handleVerification(req, res, "https://api.verifya2z.com/api/v1/verification/ecredit_score", "ecredit_score"),
+  credit_report_checker: (req, res) => handleVerification(req, res, "https://api.verifya2z.com/api/v1/verification/credit_report_checker", "credit_report_checker"),
   cibil_score: (req, res) => handleVerification(req, res, "https://api.verifya2z.com/api/v1/verification/cbil_score", "cibil_score"),
   shopEstablishmentVerify: (req, res) => handleVerification(req, res, "https://api.verifya2z.com/api/v1/verification/shop_establishment", "shop_establishment"),
 };
