@@ -33,6 +33,7 @@ const {
   mcaCompanyVerify,
   ecredit_score,
   cibil_score,
+  credit_report_checker,
 } = require("../controllers/verfiy/Verify2");
 
 const {
@@ -135,7 +136,7 @@ router.post("/mca_verify", apiAuthMiddleware, usageTracker("mca_verify"), mcaCom
 router.post("/bank-statement-analyzer/upload", apiAuthMiddleware, usageTracker("bank-statement-analyzer/upload"), upload.single("file"), bankStatement);
 router.post("/bank-statement-analyzer/report-fetch", apiAuthMiddleware, usageTracker("bank-statement-analyzer/report-fetch"), bankStatementFatch);
 router.post("/ecredit_score", apiAuthMiddleware, usageTracker("ecredit_score"), ecredit_score);
-router.post("/credit_report_checker", apiAuthMiddleware, usageTracker("credit_report_checker"), ecredit_score);
+router.post("/credit_report_checker", apiAuthMiddleware, usageTracker("credit_report_checker"), credit_report_checker);
 router.post("/cibil_score", apiAuthMiddleware, usageTracker("cibil_score"), cibil_score);
 // router.post("/cibil_score", apiAuthMiddleware, usageTracker("cibil_score"), cibil_score);
 
